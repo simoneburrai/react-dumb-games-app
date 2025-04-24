@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import RandomNumber from "../utils/RandomNumber";
 
-const startButton = () => {
+const DiceGame = () => {
     const [userNumber, setUserNumber] = useState(null);
     const [consoleNumber, setConsoleNumber] = useState(null);
     const [result, setResult] = useState(null);
@@ -53,4 +53,4 @@ const startButton = () => {
     )
 }
 
-export default startButton;
+export default DiceGame;
