@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import RandomNumber from "../utils/RandomNumber";
 
@@ -13,17 +13,21 @@ const DiceGame = () => {
 
         setUserNumber(userNumberRandom);
         setConsoleNumber(consoleNumberRandom);
+    }
 
+    useEffect(() => {
         if (userNumber > consoleNumber) {
 
             setResult("Hai vinto")
 
-        } else if (consoleNumber > userNumber) {
+        } else if (userNumber < consoleNumber) {
             setResult("Hai perso")
-        } else {
+        } else if (userNumber === consoleNumber) {
             setResult("Pareggio")
         }
-    }
+    }, [userNumber, consoleNumber])
+
+
     return (
 
         <div>
