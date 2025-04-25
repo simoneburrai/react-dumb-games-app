@@ -72,7 +72,7 @@ function Tris() {
                 const newArr = [...board];
                 let randomId = randomNum;
                 while (newArr[randomId] !== "") {
-                    randomId = RandomNumber();
+                    randomId = RandomNumber(9);
                 }
                 newArr[randomId] = "O"
                 setBoard(newArr);
@@ -91,7 +91,7 @@ function Tris() {
     return (
         <>
 
-            <div className="board">{board.map((value, index) => <button key={index} onClick={() => changeValue(index)}>{value}</button>)}</div>
+            <div className="tris-board">{board.map((value, index) => <button key={index} onClick={() => changeValue(index)}>{value}</button>)}</div>
             <button onClick={playFunction}>PLAY</button>
             {result && <div>{result}</div>}
         </>

@@ -1,0 +1,10 @@
+.tris-board {
+    width: 90px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tris-board button {
+    width: 30px;
+    height: 30px;
+}
