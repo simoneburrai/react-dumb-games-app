@@ -8,8 +8,8 @@ const DiceGame = () => {
     const [result, setResult] = useState(null);
 
     const generateNumber = () => {
-        const userNumberRandom = RandomNumber();
-        const consoleNumberRandom = RandomNumber();
+        const userNumberRandom = RandomNumber(6);
+        const consoleNumberRandom = RandomNumber(6);
 
         setUserNumber(userNumberRandom);
         setConsoleNumber(consoleNumberRandom);

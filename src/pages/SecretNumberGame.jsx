@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 
 const SecretNumber = () => {
-    const [secretNumber, setSecretNumber] = useState(RandomNumber());
+    const [secretNumber, setSecretNumber] = useState(RandomNumber(100));
     const [user, setUser] = useState("");
     const [message, setMessage] = useState("");
 

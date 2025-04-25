@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import RandomNumber from "../utils/RandomNumber";
 
 const winningCombinations = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], // Righe
@@ -12,7 +13,7 @@ function Tris() {
     const [playerTurn, setPlayerTurn] = useState(null);
     const [playing, setPlaying] = useState(false);
     const [result, setResult] = useState(null);
-    const randomNumber = () => Math.floor(Math.random() * 9);
+    const randomNum = RandomNumber(9);
     const computer = "O";
     const player = "X"
 
@@ -69,9 +70,9 @@ function Tris() {
         if (!playerTurn && playing) {
             timeOut = setTimeout(() => {
                 const newArr = [...board];
-                let randomId = randomNumber();
+                let randomId = randomNum;
                 while (newArr[randomId] !== "") {
-                    randomId = randomNumber();
+                    randomId = RandomNumber();
                 }
                 newArr[randomId] = "O"
                 setBoard(newArr);

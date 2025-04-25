@@ -1,5 +1,5 @@
-const RandomNumber = () => {
-    const numeroCasuale = Math.floor(Math.random() * 6);
+const RandomNumber = (max) => {
+    const numeroCasuale = Math.floor(Math.random() * max);
     return numeroCasuale;
 };
 
