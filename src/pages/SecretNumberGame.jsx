@@ -12,6 +12,12 @@ const SecretNumber = () => {
     };
 
     const handleUserSubmit = () => {
+
+        if (!user) {
+            setMessage("Inserisci un numero.");
+            return;
+        }
+
         const insNum = Number(user);
 
         if (isNaN(insNum) || insNum > 100 || insNum < 0) {
@@ -28,7 +34,7 @@ const SecretNumber = () => {
             setMessage("Troppo alto");
         }
 
-        setUserGuess("");
+        setUser("");
     };
 
     return (
