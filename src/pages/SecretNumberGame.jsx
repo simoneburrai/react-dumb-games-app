@@ -14,7 +14,7 @@ const SecretNumber = () => {
     const handleUserSubmit = () => {
         const insNum = Number(user);
 
-        if (isNaN(insNum)) {
+        if (isNaN(insNum) || insNum > 100 || insNum < 0) {
             setMessage("Inserisci un numero valido.");
             return;
         }

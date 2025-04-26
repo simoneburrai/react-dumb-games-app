@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './layout/NavBar';
+import Navbar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import DiceGame from './pages/DiceGame';
 import PaperScissorRock from './pages/PaperScissorRock';
