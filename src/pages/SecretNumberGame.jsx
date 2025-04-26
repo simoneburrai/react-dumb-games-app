@@ -28,7 +28,7 @@ const SecretNumber = () => {
             setMessage("Troppo alto");
         }
 
-        setUserGuess("");
+        setUser("");
     };
 
     return (
