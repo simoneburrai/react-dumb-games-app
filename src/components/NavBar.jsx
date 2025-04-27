@@ -5,19 +5,19 @@ const Navbar = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to="/">HomePage</Link>
+                    <Link to="/" className='navbar'>HomePage</Link>
                 </li>
                 <li>
-                    <Link to="/Dice-game">Dice Game</Link>
+                    <Link to="/Dice-game" className='navbar'>Dice Game</Link>
                 </li>
                 <li>
-                    <Link to="/Paper-Scissor-Rock">Paper Scissor Rock</Link>
+                    <Link to="/Paper-Scissor-Rock" className='navbar'>Paper Scissor Rock</Link>
                 </li>
                 <li>
-                    <Link to="/Tris-game">Tris Game</Link>
+                    <Link to="/Tris-game" className='navbar'>Tris Game</Link>
                 </li>
                 <li>
-                    <Link to="/Secret-Number">Secret Number Game</Link>
+                    <Link to="/Secret-Number" className='navbar'>Secret Number Game</Link>
                 </li>
             </ul>
         </nav>
