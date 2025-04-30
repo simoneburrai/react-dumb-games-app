@@ -1,23 +1,23 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav>
             <ul>
                 <li>
-                    <Link to="/">HomePage</Link>
+                    <NavLink to="/">HomePage</NavLink>
                 </li>
                 <li>
-                    <Link to="/Dice-game">Dice Game</Link>
+                    <NavLink to="/Dice-game">Dice Game</NavLink>
                 </li>
                 <li>
-                    <Link to="/Paper-Scissor-Rock">Paper Scissor Rock</Link>
+                    <NavLink to="/Paper-Scissor-Rock">Paper Scissor Rock</NavLink>
                 </li>
                 <li>
-                    <Link to="/Tris-game">Tris Game</Link>
+                    <NavLink to="/Tris-game">Tris Game</NavLink>
                 </li>
                 <li>
-                    <Link to="/Secret-Number">Secret Number Game</Link>
+                    <NavLink to="/Secret-Number">Secret Number Game</NavLink>
                 </li>
             </ul>
         </nav>
