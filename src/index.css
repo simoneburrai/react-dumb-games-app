@@ -1,0 +1,16 @@
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.navbar a {
+    padding: 20px;
+}
+
+.navbar {
+    text-align: center;
+}
+
+a.active {
+    text-decoration: underline;
+}

@@ -14,10 +14,10 @@ function Tris() {
     const [playing, setPlaying] = useState(false);
     const [result, setResult] = useState(null);
     const randomNum = RandomNumber(9);
-    const computer = "O";
-    const player = "X"
+    const computerSymbol = <i className="fa-solid fa-circle fs-2"></i>
+    const playerSymbol = <i className="fa-solid fa-circle-xmark text-success fs-2" ></i>;
 
-    const checkWin = (board, player) => {
+    function checkWin(board, player) {
         return winningCombinations.some(combination => {
             return combination.every(index => board[index] === player);
         });
@@ -41,7 +41,7 @@ function Tris() {
         if (playing && board[i] == "" && playerTurn) {
             setBoard(() => {
                 const newArr = [...board];
-                newArr[i] = "X";
+                newArr[i] = playerSymbol;
                 return newArr;
             })
 
@@ -51,10 +51,10 @@ function Tris() {
 
     useEffect(() => {
         if (playing) {
-            if (checkWin(board, computer)) {
+            if (checkWin(board, computerSymbol)) {
                 setResult("Hai perso");
                 setPlaying(false);
-            } else if (checkWin(board, player)) {
+            } else if (checkWin(board, playerSymbol)) {
                 setResult("Hai Vinto");
                 setPlaying(false);
             } else if (checkTie(board)) {
@@ -74,7 +74,7 @@ function Tris() {
                 while (newArr[randomId] !== "") {
                     randomId = RandomNumber(9);
                 }
-                newArr[randomId] = "O"
+                newArr[randomId] = computerSymbol;
                 setBoard(newArr);
                 setPlayerTurn(true);
             }, 1000)
@@ -90,12 +90,24 @@ function Tris() {
 
     return (
         <>
-
-            <div className="tris-board">{board.map((value, index) => <button key={index} onClick={() => changeValue(index)}>{value}</button>)}</div>
-            <button onClick={playFunction}>PLAY</button>
-            {result && <div>{result}</div>}
+            <div className="container mt-4">
+                <div className="row row-cols-3 g-2 mb-3" style={{ width: '300px' }}>
+                    {board.map((value, index) => (
+                        <div key={index} className="col" style={{ aspectRatio: '1/1' }}>
+                            <button
+                                className={`btn btn-outline-primary w-100 h-100 fs-2 ${value ? (value === 'X' ? 'text-success' : 'text-danger') : ''}`}
+                                onClick={() => changeValue(index)}
+                                style={{ minHeight: '80px' }} // Altezza minima per i bottoni
+                            >
+                                {value}
+                            </button>
+                        </div>
+                    ))}
+                </div>
+                <button className="btn btn-primary me-2" onClick={playFunction}>Gioca</button>
+                {result && <div className="alert alert-info mt-3" role="alert">{result}</div>}
+            </div>
         </>
-    )
+    );
 }
-
 export default Tris;
