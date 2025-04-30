@@ -8,3 +8,29 @@
     width: 30px;
     height: 30px;
 }
+
+header {
+    background-color: beige;
+}
+
+body {
+    background-color: burlywood;
+}
+
+button {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.navbar {
+    text-decoration: none;
+}
+
+.navbar :hover {
+    background-color: #db0d0d;
+    color: black;
+}
