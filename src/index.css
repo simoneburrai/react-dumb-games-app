@@ -30,7 +30,7 @@ li {
     text-decoration: none;
 }
 
-.navbar :hover {
+.navbar:hover {
     background-color: #db0d0d;
     color: black;
 }
