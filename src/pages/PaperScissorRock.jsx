@@ -37,7 +37,7 @@ const PaperScissorRock = () => {
 
             <div>
                 {choices.map((choice) => (
-                    <button key={choice} onClick={() => handleClick(choice)}>
+                    <button className="btn btn-dark me-2" key={choice} onClick={() => handleClick(choice)}>
                         {choice}
                     </button>
                 ))}

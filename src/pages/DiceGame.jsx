@@ -43,7 +43,7 @@ const DiceGame = () => {
             </div>
             <div>
                 <div >
-                    <button onClick={generateNumber}>
+                    <button className="btn btn-dark me-2 " onClick={generateNumber}>
                         Genera Numero Casuale
                     </button>
                 </div>

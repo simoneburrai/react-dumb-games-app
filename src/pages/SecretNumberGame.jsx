@@ -46,7 +46,7 @@ const SecretNumber = () => {
                 value={user}
                 onChange={handleInputChange}
             />
-            <button onClick={handleUserSubmit}>
+            <button className="btn btn-dark mx-4" onClick={handleUserSubmit}>
                 Indovina
             </button>
             <p>{message}</p>
