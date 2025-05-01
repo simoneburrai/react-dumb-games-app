@@ -14,9 +14,8 @@ function Tris() {
     const [playing, setPlaying] = useState(false);
     const [result, setResult] = useState(null);
     const randomNum = RandomNumber(9);
-    const computerSymbol = <i className="fa-solid fa-circle fs-2"></i>
-    const playerSymbol = <i className="fa-solid fa-circle-xmark text-success fs-2" ></i>;
-
+    const computerSymbol = "o"
+    const playerSymbol = "x"
     function checkWin(board, player) {
         return winningCombinations.some(combination => {
             return combination.every(index => board[index] === player);
@@ -90,12 +89,12 @@ function Tris() {
 
     return (
         <>
-            <div className="container mt-4">
+            <div className="d-flex p-3 gap-5">
                 <div className="row row-cols-3 g-2 mb-3" style={{ width: '300px' }}>
                     {board.map((value, index) => (
                         <div key={index} className="col" style={{ aspectRatio: '1/1' }}>
                             <button
-                                className={`btn btn-outline-primary w-100 h-100 fs-2 ${value ? (value === 'X' ? 'text-success' : 'text-danger') : ''}`}
+                                className={`btn btn-outline-primary w-100 h-100 fs-1 text-white ${value ? (value === 'x' ? 'bg-dark' : 'bg-danger') : ''}`}
                                 onClick={() => changeValue(index)}
                                 style={{ minHeight: '80px' }} // Altezza minima per i bottoni
                             >
@@ -103,10 +102,11 @@ function Tris() {
                             </button>
                         </div>
                     ))}
+                    <button className="btn btn-primary me-2 w-100" onClick={playFunction}>Gioca</button>
                 </div>
-                <button className="btn btn-primary me-2" onClick={playFunction}>Gioca</button>
-                {result && <div className="alert alert-info mt-3" role="alert">{result}</div>}
+                {result && <div className="alert alert-info mt-3 align-content-center p-4 h-100" role="alert">{result}</div>}
             </div>
+
         </>
     );
 }
