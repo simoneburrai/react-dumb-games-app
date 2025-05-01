@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPaper, faHandScissors, faHandRock } from '@fortawesome/free-solid-svg-icons';
+import startSound from '../assets/audios/start.mp3'
 
 const choices = [
     { name: "Carta", icon: faHandPaper },
@@ -28,6 +29,7 @@ const PaperScissorRock = () => {
     const [result, setResult] = useState("");
 
     const handleClick = (choiceName) => {
+        new Audio(startSound).play();
         const randomChoice = choices[Math.floor(Math.random() * choices.length)];
         const gameResult = getResult(choiceName, randomChoice.name);
 

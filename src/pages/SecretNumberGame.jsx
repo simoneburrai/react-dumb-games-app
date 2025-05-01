@@ -1,6 +1,8 @@
 import RandomNumber from "../utils/RandomNumber";
 import React from "react";
 import { useState } from "react";
+import startSound from '../assets/audios/start.mp3'
+import errorSound from '../assets/audios/error.mp3'
 
 const SecretNumber = () => {
     const [secretNumber, setSecretNumber] = useState(RandomNumber(100));
@@ -13,7 +15,9 @@ const SecretNumber = () => {
 
     const handleUserSubmit = () => {
 
+
         if (!user) {
+            new Audio(errorSound).play();
             setMessage("Inserisci un numero.");
             return;
         }
@@ -21,16 +25,20 @@ const SecretNumber = () => {
         const insNum = Number(user);
 
         if (isNaN(insNum) || insNum > 100 || insNum < 0) {
+            new Audio(errorSound).play();
             setMessage("Inserisci un numero valido.");
             return;
         }
 
         if (insNum === secretNumber) {
+            new Audio(startSound).play();
             setMessage("Hai Vinto!!");
 
         } else if (insNum < secretNumber) {
+            new Audio(startSound).play();
             setMessage("Troppo basso");
         } else {
+            new Audio(startSound).play();
             setMessage("Troppo alto");
         }
 

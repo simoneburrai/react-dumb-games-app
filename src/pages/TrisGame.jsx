@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import RandomNumber from "../utils/RandomNumber";
+import bubbleSound from "../assets/audios/bubble.mp3"
+import startSound from "../assets/audios/start.mp3"
 
 const winningCombinations = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], // Righe
@@ -30,6 +32,7 @@ function Tris() {
 
 
     const playFunction = () => {
+        new Audio(startSound).play();
         setPlayerTurn(true);
         setPlaying(true);
         setBoard(["", "", "", "", "", "", "", "", ""]);
@@ -45,6 +48,7 @@ function Tris() {
             })
 
             setPlayerTurn(prev => !prev);
+            new Audio(bubbleSound).play();
         }
     }
 

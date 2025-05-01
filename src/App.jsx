@@ -1,6 +1,5 @@
 import React from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import DiceGame from './pages/DiceGame';
 import PaperScissorRock from './pages/PaperScissorRock';
@@ -8,8 +7,8 @@ import TrisGame from './pages/TrisGame';
 import SecretNumberGame from './pages/SecretNumberGame';
 import DefaultLayout from "./layout/DefaultLayout";
 
-function App() {
 
+function App() {
 
   return (
     <Router>

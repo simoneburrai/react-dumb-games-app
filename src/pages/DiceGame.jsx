@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import RandomNumber from "../utils/RandomNumber";
+import startSound from '../assets/audios/start.mp3'
 
 const DiceGame = () => {
     const [userNumber, setUserNumber] = useState(null);
@@ -8,6 +9,7 @@ const DiceGame = () => {
     const [result, setResult] = useState(null);
 
     const generateNumber = () => {
+        new Audio(startSound).play();
         const userNumberRandom = RandomNumber(6);
         const consoleNumberRandom = RandomNumber(6);
 
