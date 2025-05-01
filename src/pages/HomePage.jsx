@@ -6,7 +6,7 @@ const HomePage = () => {
 
         <div className="carousel-container">
 
-            <div id="carouselExampleCaptions" className="carousel slide">
+            <div id="carouselExampleCaptions" className="carousel slide w-100 h-100">
 
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -15,8 +15,8 @@ const HomePage = () => {
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
 
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
+                <div className="carousel-inner w-100 h-100">
+                    <div className="carousel-item w-100 h-100 active">
                         <img src={placeholderImg} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Dices</h5>
@@ -25,7 +25,7 @@ const HomePage = () => {
 
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-100 h-100">
                         <img src={placeholderImg} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Paper, Scissor, Rock</h5>
@@ -34,7 +34,7 @@ const HomePage = () => {
 
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-100 h-100">
                         <img src={placeholderImg} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Secret Number</h5>
@@ -42,7 +42,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="carousel-item">
+                    <div className="carousel-item w-100 h-100">
                         <img src={placeholderImg} className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Tris</h5>
