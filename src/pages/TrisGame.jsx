@@ -89,7 +89,7 @@ function Tris() {
 
     return (
         <>
-            <div className="d-flex p-3 gap-5">
+            <div className="d-flex gap-5 justify-content-center">
                 <div className="row row-cols-3 g-2 mb-3" style={{ width: '300px' }}>
                     {board.map((value, index) => (
                         <div key={index} className="col" style={{ aspectRatio: '1/1' }}>

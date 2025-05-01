@@ -4,7 +4,7 @@ const HomePage = () => {
 
     return (
 
-        <div>
+        <div className="carousel-container">
 
             <div id="carouselExampleCaptions" className="carousel slide">
 
