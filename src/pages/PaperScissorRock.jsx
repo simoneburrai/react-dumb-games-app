@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHandPaper, faHandScissors, faHandRock } from '@fortawesome/free-solid-svg-icons';
 
-const choices = ["Carta", "Forbice", "Sasso"];
+const choices = [
+    { name: "Carta", icon: faHandPaper },
+    { name: "Forbice", icon: faHandScissors },
+    { name: "Sasso", icon: faHandRock }
+];
 
 //logica risultato
 
@@ -21,14 +27,13 @@ const PaperScissorRock = () => {
     const [computerChoice, setComputerChoice] = useState("");
     const [result, setResult] = useState("");
 
-    const handleClick = (choice) => {
+    const handleClick = (choiceName) => {
         const randomChoice = choices[Math.floor(Math.random() * choices.length)];
-        const gameResult = getResult(choice, randomChoice);
+        const gameResult = getResult(choiceName, randomChoice.name);
 
-        setUserChoice(choice);
-        setComputerChoice(randomChoice);
+        setUserChoice(choiceName);
+        setComputerChoice(randomChoice.name);
         setResult(gameResult);
-
     };
 
     return (
@@ -37,8 +42,8 @@ const PaperScissorRock = () => {
 
             <div>
                 {choices.map((choice) => (
-                    <button className="btn btn-dark me-2" key={choice} onClick={() => handleClick(choice)}>
-                        {choice}
+                    <button className="btn btn-dark me-2 fs-1 p-4" key={choice.name} onClick={() => handleClick(choice.name)}>
+                        <FontAwesomeIcon icon={choice.icon} />
                     </button>
                 ))}
             </div>
