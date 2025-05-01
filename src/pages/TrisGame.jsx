@@ -91,10 +91,11 @@ function Tris() {
         <>
             <div className="d-flex gap-5 justify-content-center">
                 <div className="row row-cols-3 g-2 mb-3" style={{ width: '300px' }}>
+                    <button className="btn btn-dark me-2 w-100 lh-100" onClick={playFunction}><h1>start</h1></button>
                     {board.map((value, index) => (
                         <div key={index} className="col" style={{ aspectRatio: '1/1' }}>
                             <button
-                                className={`btn btn-outline-primary w-100 h-100 fs-1 text-white ${value ? (value === 'x' ? 'bg-dark' : 'bg-danger') : ''}`}
+                                className={`btn btn-outline-dark w-100 h-100 fs-1 text-white ${value ? (value === 'x' ? 'bg-dark' : 'bg-danger') : ''}`}
                                 onClick={() => changeValue(index)}
                                 style={{ minHeight: '80px' }} // Altezza minima per i bottoni
                             >
@@ -102,11 +103,10 @@ function Tris() {
                             </button>
                         </div>
                     ))}
-                    <button className="btn btn-primary me-2 w-100" onClick={playFunction}>Gioca</button>
+
                 </div>
                 {result && <div className="alert alert-info mt-3 align-content-center p-4 h-100" role="alert">{result}</div>}
             </div>
-
         </>
     );
 }

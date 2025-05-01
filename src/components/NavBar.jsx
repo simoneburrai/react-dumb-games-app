@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
-            <div className="container-fluid">
-                <NavLink to="/" className="navbar-brand">Home Page</NavLink>
+            <div className='d-flex'>
+                <NavLink to="/" className="navbar-brand"><h1>React Dumbg Games</h1></NavLink>
                 <div className="navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav me-auto mb-lg-0">
                         <li className="nav-item">
