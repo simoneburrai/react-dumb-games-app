@@ -1,4 +1,8 @@
 import placeholderImg from "../assets/image.png"
+import diceImg from "../assets/img/DICE.jpg"
+import paper from "../assets/img/paper_scissor.jpeg"
+import secret from "../assets/img/secret_number.jpeg"
+import tris from "../assets/img/tris.jpeg"
 
 const Carousel = () => {
 
@@ -15,7 +19,7 @@ const Carousel = () => {
 
             <div className="carousel-inner w-100 h-100">
                 <div className="carousel-item w-100 h-100 active">
-                    <img src={placeholderImg} className="d-block w-100" alt="..." />
+                    <img src={diceImg} className="d-block w-100" alt={placeholderImg} />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Dices</h5>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -24,7 +28,7 @@ const Carousel = () => {
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={placeholderImg} className="d-block w-100" alt="..." />
+                    <img src={paper} className="d-block w-100" alt={placeholderImg} />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Paper, Scissor, Rock</h5>
                         <p>Some representative placeholder content for the second slide.</p>
@@ -33,7 +37,7 @@ const Carousel = () => {
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={placeholderImg} className="d-block w-100" alt="..." />
+                    <img src={secret} className="d-block w-100" alt={placeholderImg} />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Secret Number</h5>
                         <p>Some representative placeholder content for the third slide.</p>
@@ -41,7 +45,7 @@ const Carousel = () => {
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={placeholderImg} className="d-block w-100" alt="..." />
+                    <img src={tris} className="d-block w-100" alt={placeholderImg} />
                     <div className="carousel-caption d-none d-md-block">
                         <h5>Tris</h5>
                         <p>Some representative placeholder content for the third slide.</p>
