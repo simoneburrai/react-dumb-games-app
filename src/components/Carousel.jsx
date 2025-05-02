@@ -8,7 +8,7 @@ const Carousel = () => {
 
     return <div className="carousel-container">
 
-        <div id="carouselExampleCaptions" className="carousel slide w-100 h-100">
+        <div id="carouselExampleCaptions" className="carousel slide w-100 h-100 ">
 
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -20,8 +20,8 @@ const Carousel = () => {
             <div className="carousel-inner w-100 h-100">
                 <div className="carousel-item w-100 h-100 active">
                     <Link to="/Dice-game">
-                        <img src={dice} className="d-block w-100" alt={placeholderImg} />
-                        <div className="carousel-caption d-none d-md-block">
+                        {/* <img src={dice} className="d-block w-100" alt={placeholderImg} /> */}
+                        <div className="carousel-caption d-none d-md-block text-danger">
                             <h5>Dices</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
@@ -31,8 +31,8 @@ const Carousel = () => {
 
                 <div className="carousel-item w-100 h-100">
                     <Link to="/Paper-Scissor-Rock">
-                        <img src={paper} className="d-block w-100" alt={placeholderImg} />
-                        <div className="carousel-caption d-none d-md-block">
+                        {/* <img src={paper} className="d-block w-100" alt={placeholderImg} /> */}
+                        <div className="carousel-caption d-none d-md-block text-danger">
                             <h5>Paper, Scissor, Rock</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
@@ -41,8 +41,8 @@ const Carousel = () => {
 
                 <div className="carousel-item w-100 h-100">
                     <Link to="/Secret-Number">
-                        <img src={secret} className="d-block w-100" alt={placeholderImg} />
-                        <div className="carousel-caption d-none d-md-block">
+                        {/* <img src={secret} className="d-block w-100" alt={placeholderImg} /> */}
+                        <div className="carousel-caption d-none d-md-block text-danger">
                             <h5>Secret Number</h5>
                             <p>Some representative placeholder content for the third slide.</p>
                         </div>
@@ -51,8 +51,8 @@ const Carousel = () => {
 
                 <div className="carousel-item w-100 h-100">
                     <Link to="/Tris-game">
-                        <img src={tris} className="d-block w-100" alt={placeholderImg} />
-                        <div className="carousel-caption d-none d-md-block">
+                        {/* <img src={tris} className="d-block w-100" alt={placeholderImg} /> */}
+                        <div className="carousel-caption d-none d-md-block text-danger">
                             <h5>Tris</h5>
                             <p>Some representative placeholder content for the third slide.</p>
                         </div>
