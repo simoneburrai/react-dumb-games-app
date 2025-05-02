@@ -1,9 +1,9 @@
 import placeholderImg from "../assets/image.png"
-import diceImg from "../assets/img/DICE.jpg"
+import dice from "../assets/img/DICE.jpg"
 import paper from "../assets/img/paper_scissor.jpeg"
 import secret from "../assets/img/secret_number.jpeg"
 import tris from "../assets/img/tris.jpeg"
-
+import { Link } from 'react-router-dom';
 const Carousel = () => {
 
     return <div className="carousel-container">
@@ -19,37 +19,44 @@ const Carousel = () => {
 
             <div className="carousel-inner w-100 h-100">
                 <div className="carousel-item w-100 h-100 active">
-                    <img src={diceImg} className="d-block w-100" alt={placeholderImg} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Dices</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
+                    <Link to="/Dice-game">
+                        <img src={dice} className="d-block w-100" alt={placeholderImg} />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Dices</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </Link>
 
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={paper} className="d-block w-100" alt={placeholderImg} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Paper, Scissor, Rock</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-
+                    <Link to="/Paper-Scissor-Rock">
+                        <img src={paper} className="d-block w-100" alt={placeholderImg} />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Paper, Scissor, Rock</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={secret} className="d-block w-100" alt={placeholderImg} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Secret Number</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                    <Link to="/Secret-Number">
+                        <img src={secret} className="d-block w-100" alt={placeholderImg} />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Secret Number</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="carousel-item w-100 h-100">
-                    <img src={tris} className="d-block w-100" alt={placeholderImg} />
-                    <div className="carousel-caption d-none d-md-block">
-                        <h5>Tris</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+                    <Link to="/Tris-game">
+                        <img src={tris} className="d-block w-100" alt={placeholderImg} />
+                        <div className="carousel-caption d-none d-md-block">
+                            <h5>Tris</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </Link>
                 </div>
 
             </div>
@@ -66,7 +73,7 @@ const Carousel = () => {
 
         </div>
 
-    </div>
+    </div >
 
 }
 
