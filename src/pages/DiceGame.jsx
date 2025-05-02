@@ -2,11 +2,16 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import RandomNumber from "../utils/RandomNumber";
 import startSound from '../assets/audios/start.mp3'
+import Winning from "../components/Winning";
+import Losing from "../components/Losing";
+import { useGameResult } from "../contexts/GameResultContext";
+import Tying from "../components/Tying";
 
 const DiceGame = () => {
     const [userNumber, setUserNumber] = useState(null);
     const [consoleNumber, setConsoleNumber] = useState(null);
     const [result, setResult] = useState(null);
+    const { setHasLost, setHasTie, setHasWon } = useGameResult();
 
     const generateNumber = () => {
         new Audio(startSound).play();
@@ -19,13 +24,14 @@ const DiceGame = () => {
 
     useEffect(() => {
         if (userNumber > consoleNumber) {
-
-            setResult("Hai vinto")
-
+            setHasWon(true);
+            setResult(<Winning />);
         } else if (userNumber < consoleNumber) {
-            setResult("Hai perso")
-        } else if (userNumber === consoleNumber) {
-            setResult("Pareggio")
+            setHasLost(true);
+            setResult(<Losing />)
+        } else if (userNumber != null && userNumber === consoleNumber) {
+            setHasTie(true);
+            setResult(<Tying />)
         }
     }, [userNumber, consoleNumber])
 
@@ -49,10 +55,7 @@ const DiceGame = () => {
                         Genera Numero Casuale
                     </button>
                 </div>
-
-                <div>
-                    <h2>{result}</h2>
-                </div>
+                {result}
             </div>
         </div>
 

@@ -3,8 +3,13 @@ import React from "react";
 import { useState } from "react";
 import startSound from '../assets/audios/start.mp3'
 import errorSound from '../assets/audios/error.mp3'
+import Winning from '../components/Winning'
+import { useGameResult } from "../contexts/GameResultContext";
 
 const SecretNumber = () => {
+
+
+    const { setHasWon } = useGameResult();
     const [secretNumber, setSecretNumber] = useState(RandomNumber(100));
     const [user, setUser] = useState("");
     const [message, setMessage] = useState("");
@@ -24,7 +29,7 @@ const SecretNumber = () => {
 
         const insNum = Number(user);
 
-        if (isNaN(insNum) || insNum > 100 || insNum < 0) {
+        if (isNaN(insNum) || insNum > 100 || insNum < 1) {
             new Audio(errorSound).play();
             setMessage("Inserisci un numero valido.");
             return;
@@ -32,7 +37,8 @@ const SecretNumber = () => {
 
         if (insNum === secretNumber) {
             new Audio(startSound).play();
-            setMessage("Hai Vinto!!");
+            setHasWon(true);
+            setMessage(<Winning />);
 
         } else if (insNum < secretNumber) {
             new Audio(startSound).play();
@@ -57,7 +63,7 @@ const SecretNumber = () => {
             <button className="btn btn-dark mx-4" onClick={handleUserSubmit}>
                 Indovina
             </button>
-            <p>{message}</p>
+            {message}
         </div>
     );
 }

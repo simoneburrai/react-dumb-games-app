@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPaper, faHandScissors, faHandRock } from '@fortawesome/free-solid-svg-icons';
 import startSound from '../assets/audios/start.mp3'
+import Winning from "../components/Winning";
+import Losing from "../components/Losing";
+import { useGameResult } from "../contexts/GameResultContext";
+import Tying from "../components/Tying";
 
 const choices = [
     { name: "Carta", icon: faHandPaper },
@@ -9,24 +13,33 @@ const choices = [
     { name: "Sasso", icon: faHandRock }
 ];
 
+
 //logica risultato
 
-function getResult(user, computer) {
-    if (user === computer) return "Pareggio";
-    if (
-        (user === "Carta" && computer === "Sasso") ||
-        (user === "Forbice" && computer === "Carta") ||
-        (user === "Sasso" && computer === "Forbice")
-    ) {
-        return "Hai vinto!";
-    }
-    return "Hai perso!";
-}
 
 const PaperScissorRock = () => {
+    const { setHasWon, setHasTie, setHasLost } = useGameResult();
+
+    function getResult(user, computer) {
+        if (user === computer) {
+            setHasTie(true);
+            return <Tying />
+        }
+        if (
+            (user === "Carta" && computer === "Sasso") ||
+            (user === "Forbice" && computer === "Carta") ||
+            (user === "Sasso" && computer === "Forbice")
+        ) {
+            setHasWon(true);
+            return <Winning />;
+        }
+        setHasLost(true);
+        return <Losing />;
+    }
+
     const [userChoice, setUserChoice] = useState("");
     const [computerChoice, setComputerChoice] = useState("");
-    const [result, setResult] = useState("");
+    const [result, setResult] = useState(null);
 
     const handleClick = (choiceName) => {
         new Audio(startSound).play();
@@ -41,7 +54,6 @@ const PaperScissorRock = () => {
     return (
         <div>
             <h2>Carta, Forbice, Sasso</h2>
-
             <div>
                 {choices.map((choice) => (
                     <button className="btn btn-dark me-2 fs-1 p-4" key={choice.name} onClick={() => handleClick(choice.name)}>
@@ -53,7 +65,7 @@ const PaperScissorRock = () => {
                 <div>
                     <p>Hai scelto: {userChoice}</p>
                     <p>Il computer ha scelto: {computerChoice}</p>
-                    <p>Risultato: {result}</p>
+                    {result && result}
                 </div>
             )}
         </div>

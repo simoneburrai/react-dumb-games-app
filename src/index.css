@@ -1,14 +1,21 @@
 #root {
     height: 100vh;
     width: 100vw;
-    background-image: url(../public/main-bg.png);
+    background-image: url(/public/main-bg.png);
     background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-
 
 
 a {
     all: unset;
+    cursor: pointer;
+}
+
+button {
     cursor: pointer;
 }
 
@@ -29,6 +36,7 @@ a.active {
 }
 
 main {
+    position: relative;
     text-align: center;
     height: 80%;
     display: flex;
@@ -41,4 +49,55 @@ main {
     width: 50%;
     height: 100%;
     margin: 30px auto;
+}
+
+
+.result {
+    position: absolute;
+    font-size: 40px;
+    width: 300px;
+    height: 200px;
+    background-color: #a5ff7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 10;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ;
+}
+
+.result h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 0px 6px 6px #2a2732;
+}
+
+.result button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    position: absolute;
+    border: 0;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    text-align: center;
+    background: #2a2732;
+    color: white;
+    font-weight: bolder;
+}
+
+.result.losing {
+    background-color: #ef8383;
+}
+
+.result.tying {
+    background-color: #efdf83;
 }
