@@ -12,7 +12,7 @@ const HomePage = () => {
     }
 
     return <div className="homepage">
-        {!viewGames && <button type="button" class="btn btn-warning p-5" onClick={handleClickButtonView}><h1>View Games</h1></button>}
+        {!viewGames && <button type="button" className="btn btn-warning p-5" onClick={handleClickButtonView}><h1>View Games</h1></button>}
         {viewGames && <Carousel />}
     </div>
 
