@@ -11,10 +11,13 @@ const DiceGame = () => {
     const [userNumber, setUserNumber] = useState(null);
     const [consoleNumber, setConsoleNumber] = useState(null);
     const [result, setResult] = useState(null);
-    const { setHasLost, setHasTie, setHasWon } = useGameResult();
+    const { setHasLost, setHasTie, setHasWon, volume } = useGameResult();
 
     const generateNumber = () => {
-        new Audio(startSound).play();
+        const startAudio = new Audio(startSound);
+        if (volume) {
+            startAudio.play();
+        }
         const userNumberRandom = RandomNumber(6);
         const consoleNumberRandom = RandomNumber(6);
 

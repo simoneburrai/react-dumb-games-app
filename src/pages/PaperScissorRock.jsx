@@ -18,7 +18,7 @@ const choices = [
 
 
 const PaperScissorRock = () => {
-    const { setHasWon, setHasTie, setHasLost } = useGameResult();
+    const { setHasWon, setHasTie, setHasLost, volume } = useGameResult();
 
     function getResult(user, computer) {
         if (user === computer) {
@@ -42,7 +42,8 @@ const PaperScissorRock = () => {
     const [result, setResult] = useState(null);
 
     const handleClick = (choiceName) => {
-        new Audio(startSound).play();
+        const startAudio = new Audio(startSound);
+        if (volume) { startAudio.play() };
         const randomChoice = choices[Math.floor(Math.random() * choices.length)];
         const gameResult = getResult(choiceName, randomChoice.name);
 

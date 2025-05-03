@@ -21,9 +21,11 @@ function Tris() {
     const [result, setResult] = useState(null);
     const randomNum = RandomNumber(9);
     const computerSymbol = "o"
-    const playerSymbol = "x"
+    const playerSymbol = "x";
+    const startAudio = new Audio(startSound);
+    const bubbleAudio = new Audio(bubbleSound);
 
-    const { setHasWon, setHasTie, setHasLost } = useGameResult();
+    const { setHasWon, setHasTie, setHasLost, volume } = useGameResult();
 
     function checkWin(board, player) {
         return winningCombinations.some(combination => {
@@ -39,7 +41,9 @@ function Tris() {
 
 
     const playFunction = () => {
-        new Audio(startSound).play();
+        if (volume) {
+            startAudio.play();
+        }
         setPlayerTurn(true);
         setPlaying(true);
         setBoard(["", "", "", "", "", "", "", "", ""]);
@@ -55,7 +59,9 @@ function Tris() {
             })
 
             setPlayerTurn(prev => !prev);
-            new Audio(bubbleSound).play();
+            if (volume) {
+                bubbleAudio.play();
+            }
         }
     }
 
