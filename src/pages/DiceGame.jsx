@@ -43,18 +43,18 @@ const DiceGame = () => {
 
         <div>
             <div className="dice-number-container">
-                <div className="number">
+                <div className="number bg-warning">
                     <h2>Numero Player</h2>
                     <h4><strong>{userNumber}</strong></h4>
                 </div>
-                <div className="number">
+                <div className="number bg-warning">
                     <h2>Numero Pc</h2>
                     <h4><strong>{consoleNumber}</strong></h4>
                 </div>
             </div>
             <div>
                 <div >
-                    <button className="btn btn-dark me-2 " onClick={generateNumber}>
+                    <button className="btn btn-dark me-2 text-warning" onClick={generateNumber}>
                         Genera Numero Casuale
                     </button>
                 </div>

@@ -57,7 +57,7 @@ const PaperScissorRock = () => {
             <h1>Carta, Forbice, Sasso</h1>
             <div>
                 {choices.map((choice) => (
-                    <button className="btn btn-dark me-2 fs-1 p-4" key={choice.name} onClick={() => handleClick(choice.name)}>
+                    <button className="btn btn-dark me-2 fs-1 p-4 text-warning" key={choice.name} onClick={() => handleClick(choice.name)}>
                         <FontAwesomeIcon icon={choice.icon} />
                     </button>
                 ))}

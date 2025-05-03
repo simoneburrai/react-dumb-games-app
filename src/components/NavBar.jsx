@@ -4,15 +4,16 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark shadow-sm">
             <div className='d-flex container-fluid'>
-                <NavLink to="/" className="navbar-brand"><h1>React Dumb Games</h1></NavLink>
+                <NavLink to="/" className="navbar-brand"><h1 className="text-warning">React Dumb Games</h1></NavLink>
                 <div className="navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav me-auto mb-lg-0">
-                        <li className="nav-item">
+                    <ul className="navbar-nav me-auto mb-lg-0 ">
+                        <li className="nav-item ">
                             <NavLink
                                 to="/Dice-game"
                                 className={({ isActive }) =>
-                                    isActive ? 'nav-link active' : 'nav-link'
+                                    isActive ? 'nav-link active' : 'nav-link nav-link text-warning'
                                 }
+
                                 aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
                             >
                                 Dado
@@ -22,7 +23,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/Paper-Scissor-Rock"
                                 className={({ isActive }) =>
-                                    isActive ? 'nav-link active' : 'nav-link'
+                                    isActive ? 'nav-link active' : 'nav-link nav-link text-warning'
                                 }
                                 aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
                             >
@@ -33,7 +34,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/Tris-game"
                                 className={({ isActive }) =>
-                                    isActive ? 'nav-link active' : 'nav-link'
+                                    isActive ? 'nav-link active' : 'nav-link nav-link text-warning'
                                 }
                                 aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
                             >
@@ -44,7 +45,7 @@ const Navbar = () => {
                             <NavLink
                                 to="/Secret-Number"
                                 className={({ isActive }) =>
-                                    isActive ? 'nav-link active' : 'nav-link'
+                                    isActive ? 'nav-link active' : 'nav-link nav-link text-warning'
                                 }
                                 aria-current={({ isActive }) => (isActive ? 'page' : undefined)}
                             >

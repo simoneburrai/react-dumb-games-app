@@ -22,8 +22,8 @@ const Carousel = () => {
                     <Link to="/Dice-game">
                         {/* <img src={dice} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
-                            <h5>Dices</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h5 className="text-warning">Dices</h5>
+                            <p className="text-warning">Some representative placeholder content for the first slide.</p>
                         </div>
                     </Link>
 
@@ -33,8 +33,8 @@ const Carousel = () => {
                     <Link to="/Paper-Scissor-Rock">
                         {/* <img src={paper} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
-                            <h5>Paper, Scissor, Rock</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h5 className="text-warning">Paper, Scissor, Rock</h5>
+                            <p className="text-warning">Some representative placeholder content for the second slide.</p>
                         </div>
                     </Link>
                 </div>
@@ -43,8 +43,8 @@ const Carousel = () => {
                     <Link to="/Secret-Number">
                         {/* <img src={secret} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
-                            <h5>Secret Number</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 className="text-warning">Secret Number</h5>
+                            <p className="text-warning">Some representative placeholder content for the third slide.</p>
                         </div>
                     </Link>
                 </div>
@@ -53,8 +53,8 @@ const Carousel = () => {
                     <Link to="/Tris-game">
                         {/* <img src={tris} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
-                            <h5>Tris</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h5 className="text-warning">Tris</h5>
+                            <p className="text-warning">Some representative placeholder content for the third slide.</p>
                         </div>
                     </Link>
                 </div>

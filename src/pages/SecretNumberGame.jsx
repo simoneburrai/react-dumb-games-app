@@ -65,14 +65,14 @@ const SecretNumber = () => {
 
     return (
         <div>
-            <h1>Indovina il Numero</h1>
-            <p>Prova a indovinare un numero tra 1 e 100.</p>
+            <h1 className="text-warning">Indovina il Numero</h1>
+            <p className="text-warning">Prova a indovinare un numero tra 1 e 100.</p>
             <input
                 type="number"
                 value={user}
                 onChange={handleInputChange}
             />
-            <button className="btn btn-dark mx-4" onClick={handleUserSubmit}>
+            <button className="btn btn-dark mx-4 text-warning" onClick={handleUserSubmit}>
                 Indovina
             </button>
             {message}
