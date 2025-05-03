@@ -9,10 +9,12 @@ import { useGameResult } from "../contexts/GameResultContext";
 const SecretNumber = () => {
 
 
-    const { setHasWon } = useGameResult();
+    const { setHasWon, volume } = useGameResult();
     const [secretNumber, setSecretNumber] = useState(RandomNumber(100));
     const [user, setUser] = useState("");
     const [message, setMessage] = useState("");
+    const errorAudio = new Audio(errorSound);
+    const startAudio = new Audio(startSound);
 
     const handleInputChange = (event) => {
         setUser(event.target.value);
@@ -22,7 +24,9 @@ const SecretNumber = () => {
 
 
         if (!user) {
-            new Audio(errorSound).play();
+            if (volume) {
+                errorAudio.play();
+            }
             setMessage("Inserisci un numero.");
             return;
         }
@@ -30,21 +34,29 @@ const SecretNumber = () => {
         const insNum = Number(user);
 
         if (isNaN(insNum) || insNum > 100 || insNum < 1) {
-            new Audio(errorSound).play();
+            if (volume) {
+                errorAudio.play();
+            }
             setMessage("Inserisci un numero valido.");
             return;
         }
 
         if (insNum === secretNumber) {
-            new Audio(startSound).play();
+            if (volume) {
+                startAudio.play();
+            }
             setHasWon(true);
             setMessage(<Winning />);
 
         } else if (insNum < secretNumber) {
-            new Audio(startSound).play();
+            if (volume) {
+                startAudio.play();
+            }
             setMessage("Troppo basso");
         } else {
-            new Audio(startSound).play();
+            if (volume) {
+                startAudio.play();
+            }
             setMessage("Troppo alto");
         }
 

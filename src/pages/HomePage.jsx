@@ -2,12 +2,17 @@ import placeholderImg from "../assets/image.png"
 import { useState } from "react";
 import Carousel from "../components/Carousel";
 import introSound from "../assets/audios/intro.mp3"
+import { useGameResult } from "../contexts/GameResultContext";
 
 const HomePage = () => {
     const [viewGames, setViewGames] = useState(null);
+    const { volume } = useGameResult();
 
     const handleClickButtonView = () => {
-        new Audio(introSound).play();
+        const introAudio = new Audio(introSound);
+        if (volume) {
+            introAudio.play();
+        }
         setViewGames(true)
     }
 

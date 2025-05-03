@@ -38,6 +38,7 @@ a.active {
 main {
     width: 100%;
     position: relative;
+    width: 100%;
     text-align: center;
     height: 100%;
     display: flex;
@@ -144,4 +145,15 @@ main {
 
 .homepage h1 {
     font-size: 50px;
+}
+
+.volume-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: #2a2732;
+    border: 0;
+    padding: 20px;
+    background-color: transparent;
 }
