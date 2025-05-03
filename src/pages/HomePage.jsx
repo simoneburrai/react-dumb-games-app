@@ -11,10 +11,11 @@ const HomePage = () => {
         setViewGames(true)
     }
 
-    return <>
-        {!viewGames && <button type="button" class="btn btn-warning p-5 fs-1" onClick={handleClickButtonView}>View Games</button>}
+    return <div className="homepage">
+        {!viewGames && <button type="button" class="btn btn-warning p-5" onClick={handleClickButtonView}><h1>View Games</h1></button>}
         {viewGames && <Carousel />}
-    </>
+    </div>
+
 
 
 
