@@ -1,7 +1,7 @@
 #root {
     height: 100vh;
     width: 100vw;
-    background-image: url(/src/assets/main-bg.png);
+    background-image: url(/src/assets/main-bg.jpg);
     background-size: cover;
     position: fixed;
     top: 0;
@@ -45,7 +45,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #483d8b;
 }
 
 .carousel-container {
