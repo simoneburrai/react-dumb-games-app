@@ -65,10 +65,9 @@ main {
     position: fixed;
     z-index: 10;
     position: fixed;
-    top: 50%;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    ;
+    transform: translate(-50%, 0%);
 }
 
 .result h1 {
@@ -100,4 +99,41 @@ main {
 
 .result.tying {
     background-color: #efdf83;
+}
+
+.navbar ul {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.dice-number-container {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.dice-number-container .number {
+    width: 250px;
+    height: 150px;
+    background-color: #d5cfe4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.dice-number-container .number h4 {
+    font-size: 30px;
+    color: #483d8b;
+}
+
+.dice-number-container .number h2 {
+    font-family: 'Bahiana';
+    font-size: 30px;
+}
+
+.paper-scissor-rock h1 {
+    font-size: 40px;
 }

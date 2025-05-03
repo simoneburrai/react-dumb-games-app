@@ -52,8 +52,8 @@ const PaperScissorRock = () => {
     };
 
     return (
-        <div>
-            <h2>Carta, Forbice, Sasso</h2>
+        <div className="paper-scissor-rock">
+            <h1>Carta, Forbice, Sasso</h1>
             <div>
                 {choices.map((choice) => (
                     <button className="btn btn-dark me-2 fs-1 p-4" key={choice.name} onClick={() => handleClick(choice.name)}>

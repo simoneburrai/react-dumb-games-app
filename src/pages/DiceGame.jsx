@@ -39,12 +39,12 @@ const DiceGame = () => {
     return (
 
         <div>
-            <div >
-                <div >
+            <div className="dice-number-container">
+                <div className="number">
                     <h2>Numero Player</h2>
                     <h4><strong>{userNumber}</strong></h4>
                 </div>
-                <div >
+                <div className="number">
                     <h2>Numero Pc</h2>
                     <h4><strong>{consoleNumber}</strong></h4>
                 </div>
