@@ -75,7 +75,11 @@ const SecretNumber = () => {
             <button className="btn btn-dark mx-4 text-warning" onClick={handleUserSubmit}>
                 Indovina
             </button>
-            {message}
+            <div>
+                <h2 className="text-danger">
+                    {message}
+                </h2>
+            </div>
         </div>
     );
 }
