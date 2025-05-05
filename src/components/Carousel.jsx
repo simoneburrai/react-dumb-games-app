@@ -39,15 +39,7 @@ const Carousel = () => {
                     </Link>
                 </div>
 
-                <div className="carousel-item w-100 h-100">
-                    <Link to="/Secret-Number">
-                        {/* <img src={secret} className="d-block w-100" alt={placeholderImg} /> */}
-                        <div className="carousel-caption d-none d-md-block text-danger">
-                            <h5 className="text-warning">Secret Number</h5>
-                            <p className="text-warning">Tenta la sorte! Qual è il numero nascosto? Metti alla prova la tua intuizione in questo avvincente gioco di mente. Ogni tentativo, un passo verso la rivelazione!</p>
-                        </div>
-                    </Link>
-                </div>
+
 
                 <div className="carousel-item w-100 h-100">
                     <Link to="/Tris-game">
@@ -55,6 +47,16 @@ const Carousel = () => {
                         <div className="carousel-caption d-none d-md-block text-danger">
                             <h5 className="text-warning">Tris</h5>
                             <p className="text-warning">Griglia 3x3, sfida senza tregua! Allinea il tuo simbolo prima dell'avversario. Ogni spazio una mossa cruciale per la conquista! Tris: nervi saldi e mente acuta! </p>
+                        </div>
+                    </Link>
+                </div>
+
+                <div className="carousel-item w-100 h-100">
+                    <Link to="/Secret-Number">
+                        {/* <img src={secret} className="d-block w-100" alt={placeholderImg} /> */}
+                        <div className="carousel-caption d-none d-md-block text-danger">
+                            <h5 className="text-warning">Secret Number</h5>
+                            <p className="text-warning">Tenta la sorte! Qual è il numero nascosto? Metti alla prova la tua intuizione in questo avvincente gioco di mente. Ogni tentativo, un passo verso la rivelazione!</p>
                         </div>
                     </Link>
                 </div>
