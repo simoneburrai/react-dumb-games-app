@@ -8,7 +8,7 @@ const Carousel = () => {
 
     return <div className="carousel-container">
 
-        <div id="carouselExampleCaptions" className="carousel slide w-100 h-100 ">
+        <div id="carouselExampleCaptions" className="carousel slide w-100 h-100 container-fluid ">
 
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -17,8 +17,8 @@ const Carousel = () => {
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
             </div>
 
-            <div className="carousel-inner w-100 h-100">
-                <div className="carousel-item w-100 h-100 active">
+            <div className="carousel-inner w-100 h-100 ">
+                <div className="carousel-item w-100 h-100 active align-items-center">
                     <Link to="/Dice-game">
                         {/* <img src={dice} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
