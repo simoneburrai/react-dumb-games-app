@@ -65,10 +65,8 @@ main {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    position: fixed;
     z-index: 10;
-    position: fixed;
-    top: 0;
+    top: 5px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
@@ -83,15 +81,14 @@ main {
 .result button {
     width: 30px;
     height: 30px;
-    padding: 0;
-    line-height: 30px;
     position: absolute;
     border: 0;
     border-radius: 50%;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     font-size: 16px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     background: #2a2732;
     color: white;
     font-weight: bolder;
@@ -177,4 +174,9 @@ main {
 
 .carousel-caption h5 {
     font-size: 40px;
+}
+
+.tris .result {
+    width: 150px;
+    height: 100px;
 }

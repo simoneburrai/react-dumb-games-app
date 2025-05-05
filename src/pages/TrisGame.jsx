@@ -108,7 +108,7 @@ function Tris() {
 
 
     return <>
-        <div className="d-flex gap-5 justify-content-center">
+        <div className="d-flex gap-5 justify-content-center tris">
             <div className="row row-cols-3 g-2 mb-3" style={{ width: '300px' }}>
                 <button className="btn btn-dark me-2 w-100 lh-100" onClick={playFunction}><h1 className="text-warning">start</h1></button>
                 {board.map((value, index) => (
