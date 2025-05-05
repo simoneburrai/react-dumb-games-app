@@ -23,7 +23,7 @@ const Carousel = () => {
                         {/* <img src={dice} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
                             <h5 className="text-warning">Dices</h5>
-                            <p className="text-warning">Some representative placeholder content for the first slide.</p>
+                            <p className="text-warning">Sfidate la sorte con un lancio! Chi otterrà il numero più alto? Adrenalina pura in un gioco di dadi semplice ma avvincente.</p>
                         </div>
                     </Link>
 
@@ -34,7 +34,7 @@ const Carousel = () => {
                         {/* <img src={paper} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
                             <h5 className="text-warning">Paper, Scissor, Rock</h5>
-                            <p className="text-warning">Some representative placeholder content for the second slide.</p>
+                            <p className="text-warning">Pugno, lama o mano aperta? Sfida il destino con Carta Forbice Sasso! Un duello rapido, strategico e imprevedibile. Chi vincerà la battaglia?</p>
                         </div>
                     </Link>
                 </div>
@@ -44,7 +44,7 @@ const Carousel = () => {
                         {/* <img src={secret} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
                             <h5 className="text-warning">Secret Number</h5>
-                            <p className="text-warning">Some representative placeholder content for the third slide.</p>
+                            <p className="text-warning">Tenta la sorte! Qual è il numero nascosto? Metti alla prova la tua intuizione in questo avvincente gioco di mente. Ogni tentativo, un passo verso la rivelazione!</p>
                         </div>
                     </Link>
                 </div>
@@ -54,7 +54,7 @@ const Carousel = () => {
                         {/* <img src={tris} className="d-block w-100" alt={placeholderImg} /> */}
                         <div className="carousel-caption d-none d-md-block text-danger">
                             <h5 className="text-warning">Tris</h5>
-                            <p className="text-warning">Some representative placeholder content for the third slide.</p>
+                            <p className="text-warning">Griglia 3x3, sfida senza tregua! Allinea il tuo simbolo prima dell'avversario. Ogni spazio una mossa cruciale per la conquista! Tris: nervi saldi e mente acuta! </p>
                         </div>
                     </Link>
                 </div>
