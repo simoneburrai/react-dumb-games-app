@@ -42,7 +42,7 @@ const DiceGame = () => {
     return (
 
         <div>
-            <div className="dice-number-container">
+            <div className="dice-number-container  flex-sm-row">
                 <div className="number bg-warning">
                     <h2>Numero Player</h2>
                     <h4><strong>{userNumber}</strong></h4>
